@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 50%;
+            max-width: 500px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        h2 {
+            color: #333;
+            font-weight: bold;
+        }
+
+        img {
+            max-width: 100%;
+            margin-top: 10px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 18px;
+            color: #444;
+            margin-top: 15px;
+        }
+
+        .prediction {
+            color: #d9534f;
+            font-weight: bold;
+            font-size: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .prediction:hover {
+            transform: scale(1.1);
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 20px;
+            font-size: 16px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        a:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        a:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>📝 Prediction Result</h2>
+        <img src="{{ image_url }}" alt="Uploaded Image">
+        
+        <p><strong>Disease Detected:</strong> <span class="prediction">{{ prediction }}</span></p>
+        
+        <a href="/">🔄 Upload Another Image</a>
+    </div>
+
+</body>
+</html>
